@@ -1,0 +1,23 @@
+2021/05/20 15:37:09 listen tcp 10.29.1.1:12345: bind: address already in use
+exit status 1
+2021/05/20 15:39:43 listen tcp 10.29.1.1:12345: bind: address already in use
+exit status 1
+2021/05/20 16:30:44 http: panic serving 10.29.1.1:53560: runtime error: index out of range [2] with length 2
+goroutine 16 [running]:
+net/http.(*conn).serve.func1(0xc000088aa0)
+	/home/xjt/Desktop/development/go/src/net/http/server.go:1824 +0x153
+panic(0x70f1c0, 0xc00001a6d8)
+	/home/xjt/Desktop/development/go/src/runtime/panic.go:971 +0x499
+github.com/cloudfunny/funio/pkg/apiservices/locate.Handler(0x793310, 0xc0000c0ee0, 0xc0000e6400)
+	/home/xjt/Desktop/development/go-projects/src/github.com/cloudfunny/funio/pkg/apiservices/locate/handler.go:15 +0x18b
+net/http.HandlerFunc.ServeHTTP(0x748278, 0x793310, 0xc0000c0ee0, 0xc0000e6400)
+	/home/xjt/Desktop/development/go/src/net/http/server.go:2069 +0x44
+net/http.(*ServeMux).ServeHTTP(0x929000, 0x793310, 0xc0000c0ee0, 0xc0000e6400)
+	/home/xjt/Desktop/development/go/src/net/http/server.go:2448 +0x1ad
+net/http.serverHandler.ServeHTTP(0xc0000c0000, 0x793310, 0xc0000c0ee0, 0xc0000e6400)
+	/home/xjt/Desktop/development/go/src/net/http/server.go:2887 +0xa3
+net/http.(*conn).serve(0xc000088aa0, 0x793940, 0xc000056580)
+	/home/xjt/Desktop/development/go/src/net/http/server.go:1952 +0x8cd
+created by net/http.(*Server).Serve
+	/home/xjt/Desktop/development/go/src/net/http/server.go:3013 +0x39b
+signal: killed

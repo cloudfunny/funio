@@ -1,0 +1,1 @@
+40904 LISTEN_ADDRESS=10.29.1.2:12345 STORAGE_ROOT=/tmp/2 nohup go run dataservice/dataservice.go echo 40904
